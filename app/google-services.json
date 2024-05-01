@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168416700067",
+    "project_id": "domanloginfirebase",
+    "storage_bucket": "domanloginfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168416700067:android:7ed92a19d3118234f20116",
+        "android_client_info": {
+          "package_name": "DoMan.App"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk30GOpyy__O5Ghfx0FSX76UEAOWdl7ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
