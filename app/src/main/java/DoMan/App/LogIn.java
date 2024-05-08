@@ -63,15 +63,38 @@ public class LogIn extends AppCompatActivity {
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+
                                 if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    Toast.makeText(getApplicationContext(), "Log In Succesful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                                    startActivity(intent);
-                                    finish();
+
+                                    // log In to Main
+                                    if(LogEmail.equals("RedCross.123456@gmail.com"))
+                                    {
+                                        Toast.makeText(getApplicationContext(), "Log In Succesful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+
+                                    }
+
+                                    if(mAuth.getCurrentUser().isEmailVerified()) {
+
+                                    if(true){
+                                            // log In to Volunteer
+                                            Toast.makeText(getApplicationContext(), "Log In Succesful", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(getApplicationContext(), VolunteerMain.class);
+                                            startActivity(intent);
+                                            finish();
+
+                                        }
+                                    if(false){
+
+                                        Toast.makeText(LogIn.this, "Verify your email",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                    }
+
                                 } else {
                                     // If sign in fails, display a message to the user.
-
                                     Toast.makeText(LogIn.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
 
@@ -102,7 +125,5 @@ public class LogIn extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-
-
             }
         }
